@@ -22,7 +22,7 @@ app.add_middleware(
 
 # Load Whisper model for speech recognition
 print("Loading Whisper model...")
-whisper_model = whisper.load_model("base")
+whisper_model = whisper.load_model("large")
 
 @app.post("/text-to-speech")
 async def text_to_speech(text: str = Form(...)):
